@@ -18,8 +18,10 @@ public class CarController : MonoBehaviour
     private void Accelerate() {
         rearLeftW.motorTorque = m_verticalInput * motorForce;
         rearRightW.motorTorque = m_verticalInput * motorForce;
+        //frontLeftW.motorTorque = m_verticalInput * motorForce;
+        //frontRightW.motorTorque = m_verticalInput * motorForce;
 
-        rearLeftW.brakeTorque = rearRightW.brakeTorque = (Input.GetKey("space")) ? 10000 : 0f;
+        rearLeftW.brakeTorque = rearRightW.brakeTorque = (Input.GetKey("space")) ? 100000 : 0f;
     }
 
     private void UpdateWheelPoses() {
