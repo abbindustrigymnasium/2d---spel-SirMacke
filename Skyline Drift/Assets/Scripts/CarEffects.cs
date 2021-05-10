@@ -37,7 +37,7 @@ public class CarEffects : MonoBehaviour
             CarDirection = CarDirection * -1;
         }
 
-        Debug.Log("Car Direction " + CarDirection + " CarHeading " + CarHeading);
+        //Debug.Log(CarDirection - CarHeading);
 
         if (CarDirection - CarHeading > 20 || CarDirection - CarHeading < -20 || Input.GetKey("space")) startEmitter();
         else stopEmitter();
